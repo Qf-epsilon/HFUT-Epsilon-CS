@@ -20,11 +20,11 @@
 
 ### 方式一：在线浏览
 无需下载，直接访问在线网站查看全部资料：
-👉 [https://Qf-epsilon.github.io/HFUT-Software-Engineering](https://github.Qf-epsilon/HFUT-Software-Engineering)
+👉 [https://Qf-epsilon.github.io/HFUT-Epsilon-CS](https://github.com/Qf-epsilon/HFUT-Epsilon-CS)
 仓库与网站内容完全同步，在线找到所需文件后直接下载即可。
 
 ### 方式二：完整克隆
 需要下载全部资料到本地时使用。
-* **前置条件**：确保电脑已安装 Git
+- **前置条件**：确保电脑已安装 Git
 ```bash
-git clone [https://github.com/Qf-epsilon/HFUT-Software-Engineering.git](https://github.com/Qf-epsilon/HFUT-Software-Engineering.git)
+git clone [https://github.com/Qf-epsilon/HFUT-Epsilon-CS.git](https://github.com/Qf-epsilon/HFUT-Epsilon-CS.git)
