@@ -1,0 +1,25 @@
+import numpy as np
+
+print(np.__version__)
+print(np.show_config())
+
+mat = np.random.rand(4,4)
+print("原始矩阵：")
+print(mat)
+min_v = mat.min()
+max_v = mat.max()
+norm_mat = (mat - min_v)/(max_v - min_v)
+print("归一化矩阵：")
+print(norm_mat)
+
+A = np.array([[2,1,0,0],[1,2,1,0],[0,1,2,1],[0,0,1,2]])
+b = np.array([1,2,3,4])
+rank_A = np.linalg.matrix_rank(A)
+det_A = np.linalg.det(A)
+eig_val,eig_vec = np.linalg.eig(A)
+x_sol = np.linalg.solve(A,b)
+print("矩阵A的秩：",rank_A)
+print("行列式：",det_A)
+print("特征值：",eig_val)
+print("特征向量：",eig_vec)
+print("Ax=b的解x：",x_sol)
