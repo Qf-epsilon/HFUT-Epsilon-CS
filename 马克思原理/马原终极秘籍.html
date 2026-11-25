@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>马原终极秘籍 · 2023版 · 绪论—第5章</title>
+<meta name="description" content="马克思主义基本原理 2023 版期末速成：单选高频、多选清单、判断题 52 条错误对照、排除词表。">
+<meta name="theme-color" content="#a8321e">
+<style>
+:root{
+  --paper:#faf7f1; --card:#fff; --ink:#201d19; --ink2:#5d564d; --ink3:#8a8177;
+  --line:#e7dfd2; --line2:#f0eade;
+  --accent:#a8321e; --accent-soft:#f7e8e3;
+  --gold:#a2762c; --green:#2c6b4c; --green-soft:#e6f1ea;
+  --blue:#2a5573;
+  --serif:"Source Han Serif SC","Noto Serif SC","Songti SC",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  --radius:14px;
+}
+html[data-theme=dark]{
+  --paper:#15171a; --card:#1d2023; --ink:#e9e5dd; --ink2:#aaa39a; --ink3:#7d776f;
+  --line:#31353a; --line2:#262a2e;
+  --accent:#e8795f; --accent-soft:#3a2621;
+  --gold:#d9ab62; --green:#74bd97; --green-soft:#1d3028;
+  --blue:#8cb8d8;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--sans); font-size:16px; line-height:1.72;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+a{color:var(--accent)}
+
+/* ---------- top bar ---------- */
+.topbar{
+  position:sticky; top:0; z-index:30;
+  background:color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter:saturate(160%) blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.topbar .wrap{display:flex;align-items:center;gap:14px;padding-top:10px;padding-bottom:10px;flex-wrap:wrap}
+.brand{font-family:var(--serif);font-weight:700;font-size:19px;letter-spacing:.02em;margin-right:auto;white-space:nowrap}
+.brand small{font-family:var(--sans);font-weight:400;font-size:12px;color:var(--ink3);margin-left:8px;letter-spacing:0}
+.tools{display:flex;gap:8px;flex-wrap:wrap}
+.btn{
+  appearance:none;border:1px solid var(--line);background:var(--card);color:var(--ink);
+  font:inherit;font-size:13px;line-height:1;padding:9px 13px;border-radius:999px;cursor:pointer;
+  transition:background .15s,border-color .15s,color .15s;
+}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.btn.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.primary:hover{filter:brightness(1.08);color:#fff}
+.progress{height:3px;background:var(--line2)}
+.progress .bar{height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--gold));transition:width .25s}
+
+/* ---------- nav chips ---------- */
+.chips{display:flex;gap:8px;flex-wrap:wrap;padding-top:16px;padding-bottom:4px}
+.chip{
+  font-size:13px;text-decoration:none;color:var(--ink2);
+  border:1px solid var(--line);background:var(--card);border-radius:999px;padding:6px 12px;
+}
+.chip:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ---------- sections ---------- */
+main{padding-bottom:80px}
+.sec{margin-top:26px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px 24px;scroll-margin-top:86px}
+.sec > h2{
+  font-family:var(--serif);font-size:22px;margin:0 0 6px;display:flex;align-items:baseline;gap:10px;line-height:1.35;
+}
+.sec > h2 .no{
+  flex:0 0 auto;font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.06em;
+  color:var(--accent);background:var(--accent-soft);border-radius:6px;padding:3px 8px;transform:translateY(-2px)
+}
+.sec > p.lead{margin:0 0 18px;color:var(--ink2);font-size:14px}
+h3{font-family:var(--serif);font-size:17px;margin:22px 0 8px;padding-bottom:6px;border-bottom:1px dashed var(--line)}
+h3:first-of-type{margin-top:12px}
+h3 .tag{font-family:var(--sans);font-size:11px;color:var(--ink3);font-weight:400;margin-left:8px;letter-spacing:.04em}
+
+/* key-value rows */
+.kv{display:grid;grid-template-columns:minmax(120px,32%) 1fr;gap:2px 16px;padding:7px 0;border-bottom:1px solid var(--line2);font-size:14.5px}
+.kv:last-child{border-bottom:0}
+.kv b{font-weight:600;color:var(--ink)}
+.kv span{color:var(--ink2)}
+.kv em{font-style:normal;color:var(--accent);font-weight:600}
+
+/* tables */
+.tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:10px 0 4px;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:14px;background:var(--card)}
+th,td{padding:9px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line2)}
+th{background:var(--line2);font-weight:600;white-space:nowrap;font-size:13px;letter-spacing:.03em}
+tr:last-child td{border-bottom:0}
+td.n{white-space:nowrap;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums}
+table.plain{min-width:0}
+
+/* callout */
+.note{border-left:3px solid var(--gold);background:color-mix(in srgb, var(--gold) 9%, transparent);
+  padding:10px 14px;border-radius:0 8px 8px 0;font-size:14px;margin:14px 0;color:var(--ink2)}
+.note b{color:var(--ink)}
+.note.warn{border-left-color:var(--accent);background:var(--accent-soft)}
+
+/* judge checklist */
+.chk{
+  display:grid;grid-template-columns:20px 1fr;gap:10px;align-items:start;
+  padding:8px 10px;margin:2px -10px;border-radius:8px;cursor:pointer;
+  font-size:14.5px;line-height:1.6;
+}
+.chk:hover{background:var(--line2)}
+.chk input{position:absolute;opacity:0;width:1px;height:1px}
+.chk .box{
+  width:18px;height:18px;border:1.5px solid var(--ink3);border-radius:5px;margin-top:3px;
+  display:flex;align-items:center;justify-content:center;transition:all .15s;flex:0 0 auto
+}
+.chk .box::after{content:"";width:10px;height:6px;border-left:2px solid #fff;border-bottom:2px solid #fff;
+  transform:rotate(-45deg) translate(1px,-1px);opacity:0;transition:opacity .15s}
+.chk input:checked + .box{background:var(--green);border-color:var(--green)}
+.chk input:checked + .box::after{opacity:1}
+.chk input:focus-visible + .box{outline:2px solid var(--accent);outline-offset:2px}
+.chk .txt .x{color:var(--accent);text-decoration:line-through;text-decoration-thickness:1px;text-decoration-color:color-mix(in srgb,var(--accent) 45%,transparent)}
+.chk .txt .ar{color:var(--ink3);margin:0 6px}
+.chk .txt .o{font-weight:600;color:var(--green)}
+.chk.done{opacity:.55}
+body.todo-mode .chk.done{display:none}
+
+/* 口诀 chips */
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 4px}
+.pill{font-family:var(--serif);font-size:15px;letter-spacing:.1em;padding:7px 13px;border-radius:8px;
+  background:var(--accent-soft);color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 18%,transparent)}
+.pill small{font-family:var(--sans);letter-spacing:0;font-size:11px;opacity:.8;margin-left:6px}
+
+/* cards for numbers */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px;margin-top:10px}
+.cards > *{min-width:0}
+.numcard{border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--card)}
+.numcard .big{font-family:var(--serif);font-size:24px;font-weight:700;color:var(--accent);line-height:1}
+.numcard p{margin:6px 0 0;font-size:13.5px;color:var(--ink2)}
+
+/* footer + fab */
+footer{border-top:1px solid var(--line);padding:26px 0 40px;margin-top:36px;color:var(--ink3);font-size:12.5px}
+footer .wrap{display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap}
+.fab{
+  position:fixed;right:16px;bottom:16px;z-index:20;
+  background:var(--ink);color:var(--paper);font-size:12.5px;padding:8px 14px;border-radius:999px;
+  box-shadow:0 6px 20px rgba(0,0,0,.18);font-variant-numeric:tabular-nums;
+}
+html[data-theme=dark] .fab{background:var(--card);color:var(--ink);border:1px solid var(--line)}
+
+/* ---------- responsive ---------- */
+@media (max-width:640px){
+  body{font-size:15.5px}
+  .wrap{padding:0 14px}
+  .sec{padding:18px 16px;border-radius:12px;margin-top:18px}
+  .sec > h2{font-size:19px}
+  .brand{font-size:17px;width:100%;white-space:normal}
+  .brand small{display:block;margin:2px 0 0}
+  .kv{grid-template-columns:1fr;gap:1px}
+  .chk{font-size:14px;padding:9px 6px;margin:2px -6px}
+  .tools{width:100%}
+  .btn{flex:1 1 auto;text-align:center;min-height:40px;padding:10px 10px}
+}
+
+/* ---------- print ---------- */
+@page{margin:12mm 11mm}
+@media print{
+  html,body{background:#fff;color:#000;font-size:10.6pt;line-height:1.55}
+  .topbar,.chips,.fab,#print,.tools,.progress{display:none!important}
+  .wrap{max-width:none;padding:0}
+  main{padding-bottom:0}
+  .sec{break-inside:auto;border:1px solid #ccc;box-shadow:none;margin:8mm 0 0;padding:6mm;border-radius:0}
+  .sec > h2{font-size:14pt}
+  h3{font-size:11.5pt;break-after:avoid}
+  .kv{break-inside:avoid}
+  table{min-width:0;font-size:9.3pt}
+  th,td{padding:3px 6px}
+  .chk{padding:2px 0;margin:0;font-size:9.8pt;break-inside:avoid;display:block}
+  .chk input,.chk .box{display:none}
+  .chk .txt::before{content:"□ ";color:#555}
+  .chk.done{opacity:1}
+  body.todo-mode .chk.done{display:block}
+  .chk .txt .x{color:#000;text-decoration:line-through}
+  .chk .txt .o{color:#000}
+  .chk .txt .ar{color:#000}
+  .note{background:#f6f6f6!important;border-left:2px solid #666;break-inside:avoid}
+  .pill{background:#f2f2f2!important;color:#000!important;border-color:#ccc!important}
+  .numcard{break-inside:avoid}
+  a{color:#000;text-decoration:none}
+  footer{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <div class="brand">马原终极秘籍<small>2023版 · 绪论—第5章 · 单选/多选/判断</small></div>
+    <div class="tools">
+      <button class="btn" id="onlyTodo" type="button">只看未掌握</button>
+      <button class="btn" id="theme" type="button">深色</button>
+      <button class="btn primary" id="print" type="button">打印 / 存 PDF</button>
+    </div>
+  </div>
+  <div class="progress"><div class="bar" id="bar"></div></div>
+</header>
+
+<nav class="chips wrap" aria-label="章节导航">
+  <a class="chip" href="#s0">10分钟速览</a>
+  <a class="chip" href="#s1">单选高频</a>
+  <a class="chip" href="#s2">多选清单</a>
+  <a class="chip" href="#s3">判断52条</a>
+  <a class="chip" href="#s4">排除词表</a>
+  <a class="chip" href="#s5">数字与口诀</a>
+</nav>
+
+<main class="wrap">
+
+<!-- ============ 0 ============ -->
+<section class="sec" id="s0">
+  <h2><span class="no">00</span>进考场前最后 10 分钟只看这里</h2>
+  <p class="lead">口诀先扫一遍，再看数字清单；判断题那 52 条留到考前最后看。</p>
+
+  <div class="pills">
+    <span class="pill">内本因必现<small>五对环节</small></span>
+    <span class="pill">同平互继反<small>相对独立性</small></span>
+    <span class="pill">组寡出盟完<small>垄断五特征</small></span>
+    <span class="pill">国合参宏微<small>国垄五形式</small></span>
+    <span class="pill">所劳阶调政<small>战后五变化</small></span>
+    <span class="pill">目创指调<small>意识四表现</small></span>
+    <span class="pill">客能历<small>实践三特征</small></span>
+    <span class="pill">物政科<small>实践三形式</small></span>
+    <span class="pill">具用抽值<small>劳动二重性</small></span>
+    <span class="pill">客一绝相<small>真理四属性</small></span>
+    <span class="pill">主客多史<small>价值四特性</small></span>
+    <span class="pill">源动目标<small>实践决定认识</small></span>
+  </div>
+
+  <div class="cards">
+    <div class="numcard"><div class="big">3</div><p>三大组成／三大来源／三大发现／三大工人运动；实践三特征、三形式；感性三形式、理性三形式；生产力三要素；生产关系三方面；社会存在三要素；人民群众三作用；全球化三动因</p></div>
+    <div class="numcard"><div class="big">4</div><p>意识能动性四表现；联系四特点；实践决定认识四表现；真理四属性；价值四特性；思想路线四句；科学实践观四意义；辩证思维四方法</p></div>
+    <div class="numcard"><div class="big">5</div><p>五对基本环节；社会意识相对独立性五表现；垄断五特征；国家垄断五形式；二战后新变化五表现；五种社会形态</p></div>
+    <div class="numcard"><div class="big">6</div><p>六种思维能力（辩、历、系、战、底、创）；马克思主义基本方法六项</p></div>
+  </div>
+</section>
+
+<!-- ============ 1 ============ -->
+<section class="sec" id="s1">
+  <h2><span class="no">01</span>单选高频锁定 <span style="font-family:var(--sans);font-size:12px;color:var(--ink3)">看到题眼直接选</span></h2>
+
+  <h3>绪论<span class="tag">马克思主义是关于无产阶级和人类解放的科学</span></h3>
+  <div class="kv"><b>诞生标志</b><span>1848 年 2 月《共产党宣言》发表（不是《德意志意识形态》《资本论》）</span></div>
+  <div class="kv"><b>三部分地位</b><span>哲学＝<em>理论基础</em>，政治经济学＝主体，科学社会主义＝<em>核心／归宿</em></span></div>
+  <div class="kv"><b>三大直接来源</b><span>德国古典哲学、英国古典政治经济学、英法空想社会主义</span></div>
+  <div class="kv"><b>三大科学发现</b><span>细胞学说、能量守恒与转化定律、生物进化论</span></div>
+  <div class="kv"><b>三大工人运动</b><span>法国里昂工人起义、英国宪章运动、德国西里西亚纺织工人起义</span></div>
+  <div class="kv"><b>马克思两大发现</b><span>唯物史观、剩余价值学说</span></div>
+  <div class="kv"><b>最崇高社会理想</b><span><em>共产主义</em>（不是“实现人权”）</span></div>
+  <div class="kv"><b>生命力根源</b><span>实践基础上的<em>科学性与革命性的统一</em></span></div>
+  <div class="kv"><b>鲜明特征</b><span>科学性、革命性、实践性、人民性、发展性</span></div>
+  <div class="kv"><b>著作对应</b><span>《资本论》＝工人阶级的圣经；《反杜林论》＝全面阐述理论体系</span></div>
+
+  <h3>第一章<span class="tag">世界的物质性及发展规律</span></h3>
+  <div class="kv"><b>物质唯一特性</b><span><em>客观实在性</em></span></div>
+  <div class="kv"><b>运动</b><span>物质的<em>根本属性</em>和存在方式；静止是运动的特殊状态</span></div>
+  <div class="kv"><b>哲学基本问题</b><span>思维和存在的关系；第一方面分唯物／唯心，第二方面分可知／不可知</span></div>
+  <div class="kv"><b>辩证法总特征</b><span>联系＋发展；<em>实质与核心＝对立统一规律</em></span></div>
+  <div class="kv"><b>三大规律分工</b><span>对立统一＝动力源泉；量变质变＝状态过程；否定之否定＝方向道路</span></div>
+  <div class="kv"><b>度与关节点</b><span>度＝保持质的量的限度；关节点＝度的两端</span></div>
+  <div class="kv"><b>矛盾问题精髓</b><span>普遍性与特殊性的关系＝<em>共性与个性</em>（不是整体与部分）</span></div>
+  <div class="kv"><b>新事物标准</b><span>合乎历史前进方向、具有远大前途（不是时间新、形式新）</span></div>
+  <div class="kv"><b>辩证否定实质</b><span>扬弃：既克服又保留</span></div>
+
+  <h3>第二章<span class="tag">实践与认识及其发展规律</span></h3>
+  <div class="kv"><b>实践三特征</b><span>客观实在性、自觉能动性、社会历史性</span></div>
+  <div class="kv"><b>实践三形式</b><span>物质生产（最基本）、社会政治、科学文化；虚拟实践是派生形式</span></div>
+  <div class="kv"><b>认识本质</b><span>主体在实践基础上对客体的<em>能动反映</em>（摹写性＋创造性）</span></div>
+  <div class="kv"><b>感性／理性形式</b><span>感觉—知觉—表象；概念—判断—推理</span></div>
+  <div class="kv"><b>两次飞跃</b><span>实践→认识；认识→实践，<em>第二次更重要</em></span></div>
+  <div class="kv"><b>真理本质属性</b><span>客观性；标准＝实践（唯一）</span></div>
+  <div class="kv"><b>价值四特性</b><span>主体性、客观性、多维性、社会历史性</span></div>
+  <div class="kv"><b>思想路线</b><span>一切从实际出发、理论联系实际、<em>实事求是（核心）</em>、在实践中检验和发展真理</span></div>
+  <div class="note warn"><b>2023 版提示：</b>实践的基本特征只有“客观实在性、自觉能动性、社会历史性”三条。“直接现实性”是实践区别于理论认识的特点，不是三特征之一；老题库若按 2018 版出题，仍以教材为准。</div>
+
+  <h3>第三章<span class="tag">人类社会及其发展规律</span></h3>
+  <div class="kv"><b>社会历史观基本问题</b><span>社会存在与社会意识的关系问题</span></div>
+  <div class="kv"><b>社会存在三要素</b><span>地理环境、人口因素、物质生产方式；<em>只有生产方式起决定作用</em></span></div>
+  <div class="kv"><b>相对独立性最突出</b><span>社会意识对社会存在的<em>能动反作用</em></span></div>
+  <div class="kv"><b>生产力三要素</b><span>劳动资料（工具是客观尺度）、劳动对象、劳动者（最活跃）</span></div>
+  <div class="kv"><b>生产关系最基本</b><span><em>生产资料所有制关系</em></span></div>
+  <div class="kv"><b>上层建筑主导</b><span>政治上层建筑居主导，<em>国家政权是核心</em></span></div>
+  <div class="kv"><b>根本／直接动力</b><span>社会基本矛盾＝根本动力；阶级斗争＝阶级社会<em>直接动力</em></span></div>
+  <div class="kv"><b>阶级</b><span><em>经济范畴</em>，也是历史范畴（列宁定义）</span></div>
+  <div class="kv"><b>社会进步最高标准</b><span>生产力的发展</span></div>
+  <div class="kv"><b>社会形态更替</b><span>统一性与多样性、必然性与选择性、前进性与曲折性</span></div>
+
+  <h3>第四章<span class="tag">资本主义的本质及规律</span></h3>
+  <div class="kv"><b>政治经济学枢纽</b><span><em>劳动二重性</em></span></div>
+  <div class="kv"><b>商品价值量</b><span>由<em>社会必要劳动时间</em>决定，与劳动生产率成反比</span></div>
+  <div class="kv"><b>货币转化为资本前提</b><span><em>劳动力成为商品</em></span></div>
+  <div class="kv"><b>剩余价值来源</b><span>只在<em>生产领域</em>由雇佣工人的剩余劳动创造，流通只实现</span></div>
+  <div class="kv"><b>不变／可变资本划分依据</b><span>在<em>剩余价值生产中的作用</em></span></div>
+  <div class="kv"><b>两个比率</b><span>m′＝m/v（剥削程度）；利润率＝m/(c+v)（掩盖剥削）</span></div>
+  <div class="kv"><b>资本积累源泉</b><span>剩余价值（剩余价值的资本化）</span></div>
+  <div class="kv"><b>有机构成</b><span>c:v，c 比重增大、v 比重下降是趋势</span></div>
+  <div class="kv"><b>工资本质</b><span><em>劳动力的价值或价格</em>（不是劳动的报酬）</span></div>
+  <div class="kv"><b>经济危机</b><span><em>相对</em>生产过剩；根源＝资本主义基本矛盾</span></div>
+
+  <h3>第五章<span class="tag">资本主义的发展及其趋势</span></h3>
+  <div class="kv"><b>进入垄断的标志</b><span>垄断在经济生活中占统治地位</span></div>
+  <div class="kv"><b>金融资本</b><span><em>工业垄断资本＋银行垄断资本</em>融合</span></div>
+  <div class="kv"><b>垄断利润来源</b><span>归根到底来自<em>剩余价值</em>（不是流通中产生）</span></div>
+  <div class="kv"><b>国家垄断资本主义</b><span>资本主义内部的调整，<em>未改变性质</em>；是资本社会化更高形式</span></div>
+  <div class="kv"><b>全球化根本推动力</b><span>科学技术进步和生产力发展</span></div>
+  <div class="kv"><b>两个必然＋两个决不会</b><span>总趋势必然，但灭亡是长期过程</span></div>
+</section>
+
+<!-- ============ 2 ============ -->
+<section class="sec" id="s2">
+  <h2><span class="no">02</span>多选并列清单 <span style="font-family:var(--sans);font-size:12px;color:var(--ink3)">教材列几条就选几条</span></h2>
+  <p class="lead">多选铁律：宁全勿缺；凡“改变／创造／消灭规律”“人工智能超越人类”“实践是精神活动”一律不选。</p>
+  <div class="tblwrap">
+  <table>
+    <thead><tr><th>条数</th><th>清单</th></tr></thead>
+    <tbody>
+      <tr><td class="n">3</td><td>实践三特征／三形式；生产力三要素；生产关系三方面；社会存在三要素；人民群众三作用；全球化三动因；三大组成／来源／发现／工人运动</td></tr>
+      <tr><td class="n">4</td><td>意识能动性四表现（目、创、指、调）；联系四特点（客、普、多、条）；实践决定认识四表现（源、动、目、标）；真理四属性（客、一、绝、相）；价值四特性（主、客、多、史）；思想路线四句；科学实践观四意义；辩证思维四方法（归纳演绎、分析综合、抽象具体、逻辑历史）</td></tr>
+      <tr><td class="n">5</td><td>五对基本环节（内本因必现）；社会意识相对独立性五表现（同、平、互、继、反）；垄断五特征（组、寡、出、盟、完）；国家垄断五形式（国、合、参、宏、微）；二战后新变化五表现（所、劳、阶、调、政）</td></tr>
+      <tr><td class="n">6</td><td>六种思维能力（辩、历、系、战、底、创）；马克思主义基本方法六项（实事求是、辩证分析、社会基本矛盾与主要矛盾、历史分析、阶级分析、群众路线）</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="note"><b>易漏点：</b>①社会意识的“非意识形态”包括自然科学、语言学、形式逻辑，不算思想上层建筑；②上层建筑两部分要写全“观念上层建筑＋政治上层建筑”；③资本主义国家职能＝对内政治统治＋社会管理、对外国际交往＋维护国家安全，四类都要选。</div>
+</section>
+
+<!-- ============ 3 ============ -->
+<section class="sec" id="s3">
+  <h2><span class="no">03</span>判断题 52 条错误对照 <span style="font-family:var(--sans);font-size:12px;color:var(--ink3)">点一下标记已掌握</span></h2>
+  <p class="lead">左边是题库／模拟题里的错误说法，右边是教材正确表述。看到左边这种句式，直接判错。</p>
+
+  <h3>绪论</h3>
+  <label class="chk"><input type="checkbox" data-id="j01"><span class="box"></span><span class="txt"><span class="x">马克思主义最崇高的社会理想是实现人权</span><span class="ar">→</span><span class="o">共产主义</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j02"><span class="box"></span><span class="txt"><span class="x">马克思主义生命力的根源在于它的阶级性</span><span class="ar">→</span><span class="o">实践基础上科学性与革命性的统一</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j03"><span class="box"></span><span class="txt"><span class="x">三个组成部分中科学社会主义是理论基础</span><span class="ar">→</span><span class="o">哲学是理论基础，科社是核心</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j04"><span class="box"></span><span class="txt"><span class="x">马哲＝黑格尔辩证法＋费尔巴哈唯物主义的简单相加</span><span class="ar">→</span><span class="o">批判继承后的新创造</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j05"><span class="box"></span><span class="txt"><span class="x">狭义马克思主义只指马克思一人创立的学说</span><span class="ar">→</span><span class="o">马恩共同创立</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j06"><span class="box"></span><span class="txt"><span class="x">时代变了，马克思主义已经过时／是一成不变的教条</span><span class="ar">→</span><span class="o">开放发展，基本原理仍是真理</span></span></label>
+
+  <h3>第一章<span class="tag">世界的物质性及发展规律</span></h3>
+  <label class="chk"><input type="checkbox" data-id="j07"><span class="box"></span><span class="txt"><span class="x">物质就是实物，是各种具体物质形态的总和</span><span class="ar">→</span><span class="o">标志客观实在的哲学范畴</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j08"><span class="box"></span><span class="txt"><span class="x">运动是物质的唯一特性</span><span class="ar">→</span><span class="o">客观实在性是唯一特性，运动是根本属性</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j09"><span class="box"></span><span class="txt"><span class="x">静止就是绝对不动，事物没有任何变化</span><span class="ar">→</span><span class="o">静止是运动的特殊状态，静中有动</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j10"><span class="box"></span><span class="txt"><span class="x">世界的真正统一性在于它的完整性</span><span class="ar">→</span><span class="o">在于它的物质性</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j11"><span class="box"></span><span class="txt"><span class="x">斗争性无条件所以是主要的，同一性有条件所以是次要的</span><span class="ar">→</span><span class="o">二者相互联结，地位随条件不同而不同</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j12"><span class="box"></span><span class="txt"><span class="x">辩证的否定就是全盘抛弃</span><span class="ar">→</span><span class="o">实质是扬弃，既克服又保留</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j13"><span class="box"></span><span class="txt"><span class="x">新出现的事物、形式新奇的事物就是新事物</span><span class="ar">→</span><span class="o">看是否合乎历史前进方向</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j14"><span class="box"></span><span class="txt"><span class="x">意识是人脑像胃分泌胃液那样分泌出来的</span><span class="ar">→</span><span class="o">客观世界的主观映象</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j15"><span class="box"></span><span class="txt"><span class="x">矛盾普遍性与特殊性的关系就是整体与部分的关系</span><span class="ar">→</span><span class="o">是共性与个性、绝对与相对的关系</span></span></label>
+
+  <h3>第二章<span class="tag">实践与认识及其发展规律</span></h3>
+  <label class="chk"><input type="checkbox" data-id="j16"><span class="box"></span><span class="txt"><span class="x">实践是认识的基础，所以理论和认识可有可无</span><span class="ar">→</span><span class="o">理论对实践有能动的指导作用</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j17"><span class="box"></span><span class="txt"><span class="x">有用即真理／多数人认为正确的就是真理</span><span class="ar">→</span><span class="o">只有社会实践是检验真理的标准</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j18"><span class="box"></span><span class="txt"><span class="x">真理的形式是主观的，所以真理是主观的</span><span class="ar">→</span><span class="o">内容客观，客观性是真理的本质属性</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j19"><span class="box"></span><span class="txt"><span class="x">实践标准是绝对的、无条件的，一次实践就能定论</span><span class="ar">→</span><span class="o">确定性与不确定性的统一</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j20"><span class="box"></span><span class="txt"><span class="x">感性认识比理性认识更可靠（或反之）</span><span class="ar">→</span><span class="o">二者在实践基础上辩证统一</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j21"><span class="box"></span><span class="txt"><span class="x">认识可以一次完成，真理一旦获得就永恒不变</span><span class="ar">→</span><span class="o">认识具有反复性和无限性</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j22"><span class="box"></span><span class="txt"><span class="x">客观事物本身就是检验真理的标准（或逻辑证明是另一标准）</span><span class="ar">→</span><span class="o">唯一标准是实践，逻辑证明只是补充</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j23"><span class="box"></span><span class="txt"><span class="x">认识对实践总是起积极的指导作用／理论决定实践</span><span class="ar">→</span><span class="o">有正确错误之分，是指导不是决定</span></span></label>
+
+  <h3>第三章<span class="tag">人类社会及其发展规律</span></h3>
+  <label class="chk"><input type="checkbox" data-id="j24"><span class="box"></span><span class="txt"><span class="x">社会意识由社会存在决定，所以没有相对独立性</span><span class="ar">→</span><span class="o">有相对独立性，但不能脱离社会存在</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j25"><span class="box"></span><span class="txt"><span class="x">生产力决定生产关系，所以生产关系无关紧要</span><span class="ar">→</span><span class="o">生产关系对生产力有能动的反作用</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j26"><span class="box"></span><span class="txt"><span class="x">人民群众是历史创造者，所以英雄人物不起作用</span><span class="ar">→</span><span class="o">英雄能加速或延缓，但不能决定总方向</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j27"><span class="box"></span><span class="txt"><span class="x">科学技术是历史发展的根本动力</span><span class="ar">→</span><span class="o">根本动力是社会基本矛盾，科技是强大杠杆</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j28"><span class="box"></span><span class="txt"><span class="x">阶级是一个政治范畴</span><span class="ar">→</span><span class="o">首先是经济范畴，也是历史范畴</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j29"><span class="box"></span><span class="txt"><span class="x">社会形态更替是纯粹必然的，没有人们的选择性</span><span class="ar">→</span><span class="o">必然性与选择性的统一</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j30"><span class="box"></span><span class="txt"><span class="x">地理环境／人口因素越来越成为社会发展的决定力量</span><span class="ar">→</span><span class="o">只起加速或延缓作用，生产方式是决定力量</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j31"><span class="box"></span><span class="txt"><span class="x">社会意识形式就是该社会的思想上层建筑</span><span class="ar">→</span><span class="o">只有意识形态才是，自然科学等不是</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j32"><span class="box"></span><span class="txt"><span class="x">阶级斗争是阶级社会发展的根本动力</span><span class="ar">→</span><span class="o">是直接动力，根本动力是社会基本矛盾</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j33"><span class="box"></span><span class="txt"><span class="x">“人民群众和英雄人物共同创造历史”</span><span class="ar">→</span><span class="o">这是英雄史观，错误</span></span></label>
+
+  <h3>第四章<span class="tag">资本主义的本质及规律</span></h3>
+  <label class="chk"><input type="checkbox" data-id="j34"><span class="box"></span><span class="txt"><span class="x">商品的价值由使用价值决定，使用价值越大价值越大</span><span class="ar">→</span><span class="o">由社会必要劳动时间决定</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j35"><span class="box"></span><span class="txt"><span class="x">具体劳动创造价值，抽象劳动创造使用价值</span><span class="ar">→</span><span class="o">正好相反：具体造用、抽象成值</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j36"><span class="box"></span><span class="txt"><span class="x">剩余价值既在生产中产生，也在流通中产生</span><span class="ar">→</span><span class="o">只在生产中创造，流通只实现</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j37"><span class="box"></span><span class="txt"><span class="x">不变资本不带来剩余价值，所以与剩余价值生产无关</span><span class="ar">→</span><span class="o">是必要的物质条件</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j38"><span class="box"></span><span class="txt"><span class="x">资本积累的源泉是资本家省吃俭用</span><span class="ar">→</span><span class="o">源泉是剩余价值</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j39"><span class="box"></span><span class="txt"><span class="x">相对过剩人口是人口增长过快、劳动力绝对过多</span><span class="ar">→</span><span class="o">有机构成提高，劳动力供给超过资本需要</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j40"><span class="box"></span><span class="txt"><span class="x">经济危机的根源是消费不足／生产绝对过剩</span><span class="ar">→</span><span class="o">根源是基本矛盾，是相对过剩</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j41"><span class="box"></span><span class="txt"><span class="x">资本主义意识形态是超阶级的、全民共同的思想</span><span class="ar">→</span><span class="o">是资产阶级阶级意识的集中体现</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j42"><span class="box"></span><span class="txt"><span class="x">资本主义工资是劳动的价格</span><span class="ar">→</span><span class="o">是劳动力的价值或价格</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j43"><span class="box"></span><span class="txt"><span class="x">剩余价值率是剩余价值与全部预付资本的比率</span><span class="ar">→</span><span class="o">m′＝m/v；与全部资本比是利润率</span></span></label>
+
+  <h3>第五章<span class="tag">资本主义的发展及其趋势</span></h3>
+  <label class="chk"><input type="checkbox" data-id="j44"><span class="box"></span><span class="txt"><span class="x">垄断消除了竞争</span><span class="ar">→</span><span class="o">竞争更复杂更激烈</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j45"><span class="box"></span><span class="txt"><span class="x">国家垄断资本主义改变了资本主义的性质</span><span class="ar">→</span><span class="o">只是资本主义内部的调整</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j46"><span class="box"></span><span class="txt"><span class="x">垄断价格违背了价值规律</span><span class="ar">→</span><span class="o">恰是价值规律在该阶段作用的表现</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j47"><span class="box"></span><span class="txt"><span class="x">经济全球化实现了世界各国的经济共赢</span><span class="ar">→</span><span class="o">双刃剑，发达国家是主要受益者</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j48"><span class="box"></span><span class="txt"><span class="x">当代资本主义新变化说明基本矛盾已经解决</span><span class="ar">→</span><span class="o">本质和基本矛盾没有变</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j49"><span class="box"></span><span class="txt"><span class="x">“两个必然”意味着资本主义会立刻灭亡</span><span class="ar">→</span><span class="o">还有“两个决不会”，是长期历史过程</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j50"><span class="box"></span><span class="txt"><span class="x">资本社会化的最高形式是生产社会化</span><span class="ar">→</span><span class="o">是国家垄断资本主义，社会主义的前奏</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j51"><span class="box"></span><span class="txt"><span class="x">资本主义国家调整生产关系，因此加剧了基本矛盾</span><span class="ar">→</span><span class="o">暂时缓和，但没有根本解决</span></span></label>
+  <label class="chk"><input type="checkbox" data-id="j52"><span class="box"></span><span class="txt"><span class="x">垄断利润来自垄断价格，是在流通领域中产生的</span><span class="ar">→</span><span class="o">归根到底来自剩余价值</span></span></label>
+
+  <div class="note warn"><b>题库勘误：</b>“世界的真正统一性在于它的完整性”在网传题库里被标成“对”，与教材原文“物质性”冲突，本页按教材判<b>错</b>。考场上如果遇到，选教材口径。</div>
+</section>
+
+<!-- ============ 4 ============ -->
+<section class="sec" id="s4">
+  <h2><span class="no">04</span>排除词表 <span style="font-family:var(--sans);font-size:12px;color:var(--ink3)">不确定时就靠它</span></h2>
+
+  <h3>看到这些词，大概率是错的</h3>
+  <p style="margin:4px 0 6px;color:var(--ink2);font-size:14.5px">唯一、完全、全部、一切、任何、永恒、彻底消除、根本解决、立刻、只要……就、越……越、无关、决定一切、超阶级、全民共同、共同创造历史、一模一样、没有任何条件。</p>
+
+  <h3>看到这些表述，大概率是对的</h3>
+  <p style="margin:4px 0 6px;color:var(--ink2);font-size:14.5px">归根到底、从根本上说、在一定条件下、主要／之一、相互依存、相互转化、辩证统一、双刃剑、长期过程、总趋势、部分质变、没有改变根本性质。</p>
+
+  <h3>张冠李戴四组（最爱设坑）</h3>
+  <div class="tblwrap">
+  <table class="plain">
+    <tbody>
+      <tr><td class="n">地位</td><td>哲学＝理论基础　｜　科学社会主义＝核心／归宿</td></tr>
+      <tr><td class="n">实践</td><td>实践＝认识的来源　｜　实践＝检验真理的唯一标准</td></tr>
+      <tr><td class="n">物质</td><td>客观实在性＝唯一特性　｜　运动＝根本属性、存在方式</td></tr>
+      <tr><td class="n">动力</td><td>社会基本矛盾＝根本动力　｜　阶级斗争＝阶级社会直接动力　｜　科技＝强大杠杆</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>引文题对应原理</h3>
+  <div class="kv"><b>坐地日行八万里</b><span>绝对运动与相对静止的统一</span></div>
+  <div class="kv"><b>白马非马</b><span>割裂了共性与个性、普遍性与特殊性</span></div>
+  <div class="kv"><b>对症下药／一把钥匙开一把锁／一刀切</b><span>矛盾的特殊性，具体问题具体分析</span></div>
+  <div class="kv"><b>钉子缺，蹄铁卸……</b><span>事物是普遍联系的</span></div>
+  <div class="kv"><b>不积跬步，无以至千里</b><span>量变是质变的必要准备</span></div>
+  <div class="kv"><b>沉舟侧畔千帆过</b><span>新事物必然战胜旧事物</span></div>
+  <div class="kv"><b>纸上得来终觉浅，绝知此事要躬行</b><span>实践是认识的基础（来源／目的）</span></div>
+  <div class="kv"><b>社会一旦有技术上的需要……</b><span>实践是认识发展的动力</span></div>
+  <div class="kv"><b>没有革命的理论，就不会有革命的运动</b><span>理论对实践的重要指导作用（不是决定）</span></div>
+</section>
+
+<!-- ============ 5 ============ -->
+<section class="sec" id="s5">
+  <h2><span class="no">05</span>数字清单与答题节奏</h2>
+
+  <h3>背数字，多选不漏项</h3>
+  <div class="kv"><b>3</b><span>三大组成／三大来源／三大科学发现／三大工人运动；实践三特征、三形式；感性三形式、理性三形式；生产力三要素；生产关系三方面；社会存在三要素；人民群众三作用；全球化三动因</span></div>
+  <div class="kv"><b>4</b><span>意识能动性四表现；联系四特点；实践决定认识四表现；真理四属性；价值四特性；思想路线四句；科学实践观四意义；辩证思维四方法</span></div>
+  <div class="kv"><b>5</b><span>五对基本环节；社会意识相对独立性五表现；垄断五特征；国家垄断五形式；二战后新变化五表现；五种社会形态</span></div>
+  <div class="kv"><b>6</b><span>六种思维能力；马克思主义基本方法六项</span></div>
+
+  <h3>答题顺序</h3>
+  <div class="kv"><b>单选</b><span>先扫“唯一／根本／本质／标志／枢纽／核心”题眼，再排除绝对化项</span></div>
+  <div class="kv"><b>多选</b><span>只认并列清单，教材列几条选几条；宁可多选一项，不要漏选</span></div>
+  <div class="kv"><b>判断</b><span>先找绝对词；教材原句多为对，改动关键词的多为错</span></div>
+  <div class="kv"><b>改答案</b><span>除非明确想起教材原句，否则不改第一直觉</span></div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>依据《马克思主义基本原理》（2023 年版）与两套网传题库整理 · 覆盖绪论至第五章</span>
+    <span>勾选进度保存在本机浏览器 · 打印可直接用于 A4</span>
+  </div>
+</footer>
+
+<div class="fab" id="prog">已掌握 0/52</div>
+
+<script>
+(function(){
+  "use strict";
+  var KEY="myzg:secret:v1", TKEY="myzg:secret:theme";
+  var boxes=Array.prototype.slice.call(document.querySelectorAll(".chk input"));
+  var state={};
+  try{ state=JSON.parse(localStorage.getItem(KEY)||"{}")||{}; }catch(e){ state={}; }
+
+  function save(){ try{ localStorage.setItem(KEY,JSON.stringify(state)); }catch(e){} }
+
+  function update(){
+    var done=0;
+    boxes.forEach(function(b){
+      var lab=b.closest(".chk");
+      if(b.checked){ done++; lab.classList.add("done"); } else { lab.classList.remove("done"); }
+    });
+    var total=boxes.length||1;
+    var p=document.getElementById("prog");
+    p.textContent="已掌握 "+done+"/"+boxes.length;
+    document.getElementById("bar").style.width=(done/total*100).toFixed(1)+"%";
+  }
+
+  boxes.forEach(function(b){
+    b.checked=!!state[b.dataset.id];
+    b.addEventListener("change",function(){
+      state[b.dataset.id]=b.checked; save(); update();
+    });
+  });
+
+  var todoBtn=document.getElementById("onlyTodo");
+  todoBtn.addEventListener("click",function(){
+    document.body.classList.toggle("todo-mode");
+    var on=document.body.classList.contains("todo-mode");
+    todoBtn.classList.toggle("on",on);
+    todoBtn.textContent=on?"显示全部":"只看未掌握";
+  });
+
+  var themeBtn=document.getElementById("theme");
+  function applyTheme(t){
+    document.documentElement.dataset.theme=t;
+    themeBtn.textContent=t==="dark"?"浅色":"深色";
+    try{ localStorage.setItem(TKEY,t); }catch(e){}
+  }
+  var savedTheme="light";
+  try{ savedTheme=localStorage.getItem(TKEY)||"light"; }catch(e){}
+  applyTheme(savedTheme);
+  themeBtn.addEventListener("click",function(){
+    applyTheme(document.documentElement.dataset.theme==="dark"?"light":"dark");
+  });
+
+  document.getElementById("print").addEventListener("click",function(){ window.print(); });
+
+  update();
+})();
+</script>
+</body>
+</html>
